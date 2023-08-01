@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BasisGrotesquePro-Regular.ttf">
+            <string>BasisGrotesquePro-Regular</string>
+        </array>
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WITButtonView" customModule="WIT" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="mUB-AP-RuZ" id="0JP-Z7-34o"/>
+                <outlet property="button" destination="wiD-ci-o2F" id="W9Z-q2-BFX"/>
+                <outlet property="imgLeftView" destination="lR9-4h-13h" id="Udo-MJ-lxJ"/>
+                <outlet property="imgRightView" destination="Xdz-mn-lIC" id="cfY-97-e0i"/>
+                <outlet property="textLabel" destination="Bp9-CV-DSH" id="kAi-j6-cRW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-AP-RuZ">
+                    <rect key="frame" x="0.0" y="44" width="300" height="12"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xdz-mn-lIC">
+                            <rect key="frame" x="270" y="-4" width="20" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="3zY-V3-m5O"/>
+                                <constraint firstAttribute="width" secondItem="Xdz-mn-lIC" secondAttribute="height" multiplier="1:1" id="ell-5Z-nNy"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-4h-13h">
+                            <rect key="frame" x="10" y="-4" width="20" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="lR9-4h-13h" secondAttribute="height" multiplier="1:1" id="B2C-iI-Vbw"/>
+                                <constraint firstAttribute="height" constant="20" id="fdl-FN-ONQ"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiD-ci-o2F" customClass="AppButton" customModule="WIT" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="12"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="L3M-LG-VQb"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-CV-DSH" customClass="BasisGrotesqueProBoldBlack16" customModule="WIT" customModuleProvider="target">
+                            <rect key="frame" x="40" y="0.0" width="220" height="12"/>
+                            <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="wiD-ci-o2F" secondAttribute="trailing" id="9Kr-ja-Xh4"/>
+                        <constraint firstItem="lR9-4h-13h" firstAttribute="leading" secondItem="mUB-AP-RuZ" secondAttribute="leading" constant="10" id="FLQ-dm-3mH"/>
+                        <constraint firstAttribute="bottom" secondItem="wiD-ci-o2F" secondAttribute="bottom" id="Lfd-rO-aEB"/>
+                        <constraint firstItem="lR9-4h-13h" firstAttribute="centerY" secondItem="mUB-AP-RuZ" secondAttribute="centerY" id="PKz-oJ-9E9"/>
+                        <constraint firstItem="Bp9-CV-DSH" firstAttribute="leading" secondItem="lR9-4h-13h" secondAttribute="trailing" constant="10" id="XKK-gG-mBB"/>
+                        <constraint firstItem="Bp9-CV-DSH" firstAttribute="top" secondItem="mUB-AP-RuZ" secondAttribute="top" id="YWv-Oa-6h5"/>
+                        <constraint firstItem="Xdz-mn-lIC" firstAttribute="centerY" secondItem="mUB-AP-RuZ" secondAttribute="centerY" id="f8C-Oy-IIN"/>
+                        <constraint firstAttribute="trailing" secondItem="Xdz-mn-lIC" secondAttribute="trailing" constant="10" id="meu-Fq-r7H"/>
+                        <constraint firstItem="Xdz-mn-lIC" firstAttribute="leading" secondItem="Bp9-CV-DSH" secondAttribute="trailing" constant="10" id="nH5-xX-9mX"/>
+                        <constraint firstItem="wiD-ci-o2F" firstAttribute="left" secondItem="mUB-AP-RuZ" secondAttribute="left" id="qxT-Ya-MEc"/>
+                        <constraint firstAttribute="top" secondItem="wiD-ci-o2F" secondAttribute="top" id="tFF-6z-V2Y"/>
+                        <constraint firstAttribute="bottom" secondItem="Bp9-CV-DSH" secondAttribute="bottom" id="yl3-TB-CyW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mUB-AP-RuZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" symbolic="YES" id="7sn-pi-vuH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mUB-AP-RuZ" secondAttribute="trailing" symbolic="YES" id="YAw-R0-L3s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mUB-AP-RuZ" secondAttribute="bottom" symbolic="YES" id="a5h-UC-KdL"/>
+                <constraint firstItem="mUB-AP-RuZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" symbolic="YES" id="zuN-Ni-N98"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.200000000000003" y="-226.6866566716642"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Color">
+            <color red="0.99607843137254903" green="0.83529411764705885" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
